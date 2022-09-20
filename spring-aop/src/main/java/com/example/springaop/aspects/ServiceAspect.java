@@ -10,7 +10,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class ServiceAspect {
 
-
+    //Advice Tipleri: Before-After-Around-AfterThrowing-AfterReturning
+    //PointCut İfadeleri: Target-Execution-@Annotations
+    
     //direkt olarak hangi pakedin altındakı hangi metotların çalışmasını fitreledim
     @Before("execution(* com.example.springaop.services.MessageService.getMessage(..))")
     public void beforeFromMethods (JoinPoint joinPoint) {
